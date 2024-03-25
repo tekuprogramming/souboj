@@ -1,6 +1,6 @@
 public class BossExperienceStrategy implements ExperienceStrategy {
     @Override
-    public int gainExperience() {
+    public double gainExperience() {
         return 50;
     }
 }

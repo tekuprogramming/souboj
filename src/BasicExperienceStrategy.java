@@ -1,6 +1,6 @@
 public class BasicExperienceStrategy implements ExperienceStrategy {
     @Override
-    public int gainExperience() {
+    public double gainExperience() {
         return 10;
     }
 }
