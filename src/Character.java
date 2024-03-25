@@ -1,11 +1,11 @@
 public class Character {
     private String name;
     private int level;
-    private int strength;
-    private int intelligence;
-    private int agility;
-    private int resilience;
-    private int experience;
+    private double strength;
+    private double intelligence;
+    private double agility;
+    private double resilience;
+    private double experience;
     private int health;
 
     public Character(String name, int level) {
@@ -23,7 +23,7 @@ public class Character {
         return health;
     }
 
-    public void gainExperience(int experience) {
+    public void gainExperience(double experience) {
         this.experience += experience;
     }
 }
