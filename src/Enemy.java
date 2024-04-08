@@ -8,8 +8,9 @@ public class Enemy {
     private double intelligence;
     private double agility;
     private double resilience;
+    private double attackDamage;
 
-    public Enemy(String name, int level) {
+    public Enemy(String name, int level, double attackDamage) {
         this.name = name;
         this.level = level;
         this.health = level * 100;
@@ -18,6 +19,7 @@ public class Enemy {
         this.intelligence = random.nextDouble() * 10;
         this.agility = random.nextDouble() * 10;
         this.resilience = random.nextDouble() * 10;
+        this.attackDamage = attackDamage;
     }
 
     public int getHealth() {
@@ -61,5 +63,17 @@ public class Enemy {
 
     public int getLevel() {
         return level;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getAttackDamage() {
+        return attackDamage;
+    }
+
+    public void setAttackDamage(double attackDamage) {
+        this.attackDamage = attackDamage;
     }
 }
