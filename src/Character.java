@@ -26,4 +26,20 @@ public class Character {
     public void gainExperience(double experience) {
         this.experience += experience;
     }
+
+    public void modifyStrength(double percentage) {
+        this.strength *= (1 + percentage);
+    }
+
+    public void modifyIntelligence(double percentage) {
+        this.intelligence *= (1 + percentage);
+    }
+
+    public void modifyAgility(double percentage) {
+        this.agility *= (1 + percentage);
+    }
+
+    public void modifyResilience(double percentage) {
+        this.resilience *= (1 + percentage);
+    }
 }
