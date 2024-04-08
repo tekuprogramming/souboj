@@ -37,10 +37,10 @@ public class CharacterFactory {
             case "warrior":
                 character.modifyStrength(0.03);
                 break;
-            case "wizard":
+            case "mage":
                 character.modifyIntelligence(0.03);
                 break;
-            case "scout":
+            case "rogue":
                 character.modifyAgility(0.03);
                 break;
         }
