@@ -1,6 +1,6 @@
 public class CharacterFactory {
-    public static Character createCharacter(String name, String race, String characterClass, int level) {
-        Character character = new Character(name, level);
+    public static Character createCharacter(String name, int level, double defense) {
+        Character character = new Character(name, level, defense);
         return character;
     }
 
