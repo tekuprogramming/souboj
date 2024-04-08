@@ -5,10 +5,11 @@ public class Character {
     private double intelligence;
     private double agility;
     private double resilience;
-    private double experience;
+    private int experience;
     private int health;
+    private double defense;
 
-    public Character(String name, int level) {
+    public Character(String name, int level, double defense) {
         this.name = name;
         this.level = level;
         this.strength = 5;
@@ -17,13 +18,14 @@ public class Character {
         this.resilience = 5;
         this.experience = 0;
         this.health = level * 100;
+        this.defense = defense;
     }
 
     public int getHealth() {
         return health;
     }
 
-    public void gainExperience(double experience) {
+    public void gainExperience(int experience) {
         this.experience += experience;
     }
 
@@ -41,5 +43,40 @@ public class Character {
 
     public void modifyResilience(double percentage) {
         this.resilience *= (1 + percentage);
+    }
+
+    public boolean isAlive() {
+        return health > 0;
+    }
+
+    public double getStrength() {
+        return strength;
+    }
+
+    public double getIntelligence() {
+        return intelligence;
+    }
+
+    public double getAgility() {
+        return agility;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getDefense() {
+        return defense;
+    }
+
+    public void setDefense(double defense) {
+        this.defense = defense;
+    }
+
+    public void takeDamage(double damage) {
+        health -= (int) damage;
+        if (health < 0) {
+            health = 0;
+        }
     }
 }
